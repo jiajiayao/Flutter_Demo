@@ -1,0 +1,6 @@
+name: flutter_website_server
+description: 企业站DEMO
+
+dependencies:
+  http_server: ^0.9.8
+

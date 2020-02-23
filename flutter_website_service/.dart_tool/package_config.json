@@ -1,0 +1,32 @@
+{
+  "configVersion": 2,
+  "packages": [
+    {
+      "name": "http_server",
+      "rootUri": "file:///C:/Users/jiajia/AppData/Roaming/Pub/Cache/hosted/pub.flutter-io.cn/http_server-0.9.8+3",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
+      "name": "mime",
+      "rootUri": "file:///C:/Users/jiajia/AppData/Roaming/Pub/Cache/hosted/pub.flutter-io.cn/mime-0.9.6+3",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
+      "name": "path",
+      "rootUri": "file:///C:/Users/jiajia/AppData/Roaming/Pub/Cache/hosted/pub.flutter-io.cn/path-1.6.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
+      "name": "flutter_website_server",
+      "rootUri": "../",
+      "packageUri": "lib/",
+      "languageVersion": "2.7"
+    }
+  ],
+  "generated": "2020-02-23T05:52:26.257801Z",
+  "generator": "pub",
+  "generatorVersion": "2.7.0"
+}
