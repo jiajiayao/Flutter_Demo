@@ -3,6 +3,9 @@ import 'package:flutter_website/loading.dart';
 import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 import 'loading.dart';
 
+import 'app.dart';
+
+
 
 void main() => runApp(MaterialApp(
   debugShowCheckedModeBanner: false,//调试信息
@@ -10,13 +13,13 @@ void main() => runApp(MaterialApp(
   //自定义主题
   theme: mDefaultTheme,
 
-  //添加路由（静态）
+  //全局路由表（静态路由）
   routes: <String,WidgetBuilder>{
-    //"app": (BuildContext context) => App(),
+    "app": (BuildContext context) => App(),
     "company_info": (BuildContext context) => WebviewScaffold(
       url: "https://www.baidu.com",
       appBar: AppBar(
-        title:Text('浏览器'),
+        title:Text('公司介绍'),
         leading: IconButton(
           icon: Icon(Icons.home),
           onPressed: (){
@@ -29,7 +32,7 @@ void main() => runApp(MaterialApp(
     )
   },
 
-  //指定加载页面
+  //主页第一次加载页面
   home:LoadingPage(),
 
 ));

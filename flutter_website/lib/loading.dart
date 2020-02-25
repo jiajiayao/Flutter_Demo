@@ -2,12 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 
+//状态可变继承widget
 class LoadingPage extends StatefulWidget{
   @override
   _LoadingState createState() => _LoadingState();
 }
 
 class _LoadingState extends State<LoadingPage>{
+
+  //欢迎页面逻辑
   @override
   void initState(){
     super.initState();
@@ -15,15 +18,17 @@ class _LoadingState extends State<LoadingPage>{
     //在加载页面停顿3秒
     Future.delayed(Duration(seconds: 3),(){
       print('企业站启动。。');
-      Navigator.of(context).pushReplacementNamed('company_info');
+      Navigator.of(context).pushReplacementNamed('app');
           
 
     });
   }
 
+
+  //欢迎页面元素
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
+    // PageView
     return Center(
       child: Center(
         child: Stack(
