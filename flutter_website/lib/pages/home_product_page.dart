@@ -1,6 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../model/product.dart';
+import '../utils/untils.dart';
+import 'product_detail_page.dart';
 
 //状态可变继承widget
 class HomeProductPage extends StatelessWidget{
@@ -33,12 +34,25 @@ class HomeProductPage extends StatelessWidget{
 
       //返回产品列表
       List<Widget> listWigdets = list.data.map((i){
+
+        var bgColor = string2Color('#f8f8f8');
+        Color titleColor = string2Color('#db5d41');
+        Color subtitleColor = string2Color('#999999');
+
         //返回产品项
-        return Container(
+        return GestureDetector(
+          onTap: (){
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => ProductDetail(item:i)),
+            );
+          },
+          child: Container(
           width: itemWidth,
           margin: EdgeInsets.only(bottom: 15,left: 2),
           padding: EdgeInsets.only(top:10,left: 13,bottom: 7),
-          color: Colors.grey,
+          color: bgColor,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -46,13 +60,13 @@ class HomeProductPage extends StatelessWidget{
                 i.name,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
-                style: TextStyle(fontSize: 15,color: Colors.white),
+                style: TextStyle(fontSize: 15,color: titleColor),
               ),
               Text(
                 i.desc,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
-                style: TextStyle(fontSize: 15,color: Colors.white),
+                style: TextStyle(fontSize: 15,color: subtitleColor),
               ),
               Container(
                 alignment: Alignment(0, 0),
@@ -65,7 +79,9 @@ class HomeProductPage extends StatelessWidget{
               )
             ],
           ),
+        ),
         );
+
       }).toList();
 
       //标题及产品列表
