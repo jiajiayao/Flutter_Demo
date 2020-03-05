@@ -6,4 +6,4 @@
 
 部分页面效果如下：
 
-<img src="preview/Screenshot_1.jpg" style="width:30%">
+<img src="preview/Screenshot_1.jpg" style="height:30;width:30%">
