@@ -4,7 +4,7 @@ import 'dart:io';//http
 import 'data.dart';
 
 main() async {
-  var requestServer =await HttpServer.bind("192.168.3.58", 8080);
+  var requestServer =await HttpServer.bind("192.168.3.50", 8080);
   print('启动成功');
   await for(HttpRequest request in requestServer){
     handleMessage(request);
