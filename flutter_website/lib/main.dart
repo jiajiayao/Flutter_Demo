@@ -9,7 +9,7 @@ import 'app.dart';
 
 void main() => runApp(MaterialApp(
   debugShowCheckedModeBanner: false,//调试信息
-  title: 'Flutter企业站实战',
+  title: '小米商城',
   //自定义主题
   theme: mDefaultTheme,
 

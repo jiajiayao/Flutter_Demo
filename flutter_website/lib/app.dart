@@ -57,7 +57,7 @@ class AppState extends State<App>{
     // PageView
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flutter企业站实战'),
+        title: Text('小米商城'),
         leading: Icon(Icons.home),
         actions: <Widget>[
           Padding(

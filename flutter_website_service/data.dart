@@ -1,6 +1,6 @@
 //模拟的数据
 var products = {
-  "items": [
+  "items": 
     [
       {
         "desc": "4999\u5143\u8d77",
@@ -294,7 +294,6 @@ var products = {
         "name": "Redmi\u5c0f\u7231\u97f3\u7bb1 Play"
       }
     ]
-  ]
 };
 
 var news = {

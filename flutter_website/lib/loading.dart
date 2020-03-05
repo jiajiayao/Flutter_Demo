@@ -33,12 +33,12 @@ class _LoadingState extends State<LoadingPage>{
       child: Center(
         child: Stack(
           children: <Widget>[
-            Image.asset(
-              'assets/images/loading.jpeg'
+            Image.network(
+              'https://pic2.zhimg.com/80/v2-4bdec404796bc24775804535b43e3f01_720w.jpg'
             ),
             Center(
               child: Text(
-                  'Flutter 企业站',
+                  '感动人心价格厚道',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 36.0,

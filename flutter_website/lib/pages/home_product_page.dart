@@ -12,19 +12,63 @@ class HomeProductPage extends StatelessWidget{
   //首页类容
   @override
   Widget build(BuildContext context) {
-
+    //设备宽度
     double deviceWidth = MediaQuery.of(context).size.width;
 
-    Widget _build(BuildContext context, double deivceWidth){
+    // 背景容器
+    return Container(
+      width: deviceWidth,
+      color: Colors.white,
+      padding: EdgeInsets.only(top: 10,bottom: 10,left: 7.5),
+      child: _build(context,deviceWidth),
+    );
+  }
 
+  //返回标题及列表
+  Widget _build(BuildContext context, double deviceWidth){
+
+      //item宽度
       double itemWidth = deviceWidth * 168.5 / 360;//容器
-
       double imageWidth = deviceWidth * 130 / 360;
 
-      List<Widget> listWigdet = list.data.map((i){
-
+      //返回产品列表
+      List<Widget> listWigdets = list.data.map((i){
+        //返回产品项
+        return Container(
+          width: itemWidth,
+          margin: EdgeInsets.only(bottom: 15,left: 2),
+          padding: EdgeInsets.only(top:10,left: 13,bottom: 7),
+          color: Colors.grey,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Text(
+                i.name,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(fontSize: 15,color: Colors.white),
+              ),
+              Text(
+                i.desc,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(fontSize: 15,color: Colors.white),
+              ),
+              Container(
+                alignment: Alignment(0, 0),
+                margin: EdgeInsets.only(top:5),
+                child: Image.network(
+                  i.imageUrl,
+                  width: imageWidth,
+                  height: imageWidth,
+                ),
+              )
+            ],
+          ),
+        );
       }).toList();
 
+      //标题及产品列表
       return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -37,20 +81,11 @@ class HomeProductPage extends StatelessWidget{
           ),
           Wrap(
             spacing: 2,
-            children: <Widget>[],
+            children: listWigdets,
           ),
         ],
       );
     }
 
-    // PageView
-    return Container(
-      width: deviceWidth,
-      color: Colors.white,
-      padding: EdgeInsets.only(top: 10,bottom: 10,left: 7.5),
-      child: _build(context,deviceWidth),
-    );
-
-
-  }
+    
 }
